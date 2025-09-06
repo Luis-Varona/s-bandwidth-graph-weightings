@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69.0.0", "wheel>=0.42.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "s-bandwidth-graph-weightings"
+version = "1.0.0"
+description = "Computational indications that no positive edge weighting can reduce the S-bandwidth of a graph"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Luis M. B. Varona", email = "lm.varona@outlook.com" },
+]
+maintainers = [
+    { name = "Luis M. B. Varona", email = "lm.varona@outlook.com" },
+]
+dependencies =[
+    "networkx>=3.2",
+    "numpy>=1.25.0",
+    "pandas>=2.1.0",
+    "polars>=0.20.0",
+    "scipy>1.10.0",
+]
+keywords = [
+    "linear algebra",
+    "graph theory",
+    "spectral graph theory",
+    "quantum computing",
+    "linear programming",
+]
+
+[project.urls]
+Repository = "https://github.com/Luis-Varona/s-bandwidth-graph-weightings"
+
+[project.optional-dependencies]
+static-analysis = ["mypy", "ruff"]
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]
